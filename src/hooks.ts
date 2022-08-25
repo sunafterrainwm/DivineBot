@@ -1,5 +1,4 @@
-import type { BigNumber } from 'bignumber.js';
-
+/* eslint-disable jsdoc/check-tag-names */
 import type { IAsk, IBaseAsk } from 'src/index';
 
 // eslint-disable-next-line @typescript-eslint/no-invalid-void-type
@@ -55,12 +54,20 @@ class Hook<A extends unknown[], R> implements IHook<A, R> {
 
 export const onResolveAskProbability = new Hook<[ ask: IBaseAsk ], true>();
 export const rejectRandomProbability = new Hook<[ ask: IBaseAsk ], true>();
+/**
+ * @internal
+ */
+export const overrideFilterAskProbability = new Hook<[ ask: IAsk ], null>();
 
 export const onProbabilityToLuck = new Hook<[ ask: IAsk ], string>();
 export const onProbabilityToPercentage = new Hook<[ ask: IAsk ], string>();
 export const onProbabilityToCoin = new Hook<[ ask: IAsk ], string>();
 export const onProbabilityToDice6 = new Hook<[ ask: IAsk ], string>();
-export const onProbabilityToString = new Hook<[ ask: IAsk ], BigNumber | number>();
+export const onProbabilityToString = new Hook<[ ask: IAsk ], boolean>();
+/**
+ * @internal
+ */
+export const overrideFilterToStringNumber = new Hook<[ ask: IAsk ], null>();
 
 export const onStoreProbabilityCache = new Hook<[ ask: IAsk ], boolean>();
 export const onFetchProbabilityCache = new Hook<[ rawQuery: string, userId: number ], IAsk | false>();

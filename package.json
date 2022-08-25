@@ -10,7 +10,7 @@
 	},
 	"private": true,
 	"scripts": {
-		"start": "node src/index.ts",
+		"start": "node src/index.js",
 		"ts-start": "ts-node src/index.ts --preferTsExts",
 		"test": "pnpm run lint && pnpm run build",
 		"build": "tsc",

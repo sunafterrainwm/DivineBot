@@ -79,13 +79,13 @@ winston.add( new winston.transports.Console( {
 } ) );
 
 process.on( 'unhandledRejection', function ( _reason, promise ) {
-	promise.catch( function ( e ) {
-		winston.error( 'Unhandled Rejection: ', e );
+	promise.catch( function ( error ) {
+		winston.error( 'Unhandled Rejection: ', util.inspect( error ) );
 	} );
 } );
 
-process.on( 'uncaughtException', function ( err ) {
-	winston.error( 'Uncaught exception:', err );
+process.on( 'uncaughtException', function ( error ) {
+	winston.error( 'Uncaught exception:', util.inspect( error ) );
 } );
 
 process.on( 'rejectionHandled', function () {
@@ -93,7 +93,7 @@ process.on( 'rejectionHandled', function () {
 } );
 
 process.on( 'warning', ( warning ) => {
-	winston.warn( warning );
+	winston.warn( util.inspect( warning ) );
 } );
 
 // 日志等级、文件设置
@@ -134,7 +134,7 @@ if ( config.logging?.logToChannel ) {
 	class CustomTelegramLogger extends TelegramLogger {
 		public chatId!: number;
 
-		public log( info: winston.Logform.TransformableInfo, next: () => void ) {
+		public override log( info: winston.Logform.TransformableInfo, next: () => void ) {
 			if ( String( info.message ).match( 'TelegramLoggerError' ) ) {
 				// @ts-expect-error TS2554
 				return next( null, true );
@@ -143,6 +143,7 @@ if ( config.logging?.logToChannel ) {
 			return super.log!( info, next );
 		}
 
+		/* private override sendMessage( messageText: string ): void */
 		public sendMessage( messageText: string ) {
 			// eslint-disable-next-line @typescript-eslint/no-this-alias
 			const self = this;
@@ -196,6 +197,8 @@ function getProbability( ask: IBaseAsk ): void {
 			[ , ask.probability ] = getRandomProbability();
 		}
 	}
+
+	hooks.overrideFilterAskProbability.emit( ask as IAsk );
 }
 
 function getRandomID(): string {
@@ -238,10 +241,9 @@ function probabilityToLuck( ask: IAsk ) {
 	if ( hProbability !== null ) {
 		return hProbability;
 	}
-	let probability = hooks.onProbabilityToString.emit( ask ) ?? ask.probability;
-	if ( typeof probability === 'number' ) {
-		probability = new BigNumber( probability );
-	}
+	hooks.onProbabilityToString.emit( ask );
+	hooks.overrideFilterToStringNumber.emit( ask );
+	const probability = ask.probability;
 
 	if ( BigNumber.isBigNumber( probability ) ) {
 		if ( probability.isGreaterThanOrEqualTo( 0 ) && probability.isLessThanOrEqualTo( 12.5 ) ) {
@@ -272,10 +274,9 @@ function probabilityToPercentage( ask: IAsk ) {
 	if ( hProbability !== null ) {
 		return hProbability;
 	}
-	let probability = hooks.onProbabilityToString.emit( ask ) ?? ask.probability;
-	if ( typeof probability === 'number' ) {
-		probability = new BigNumber( probability );
-	}
+	hooks.onProbabilityToString.emit( ask );
+	hooks.overrideFilterToStringNumber.emit( ask );
+	let probability = ask.probability;
 
 	if ( BigNumber.isBigNumber( probability ) ) {
 		if ( ask.reverted ) {
@@ -297,10 +298,9 @@ function probabilityToCoin( ask: IAsk ) {
 	if ( hProbability !== null ) {
 		return hProbability;
 	}
-	let probability = hooks.onProbabilityToString.emit( ask ) ?? ask.probability;
-	if ( typeof probability === 'number' ) {
-		probability = new BigNumber( probability );
-	}
+	hooks.onProbabilityToString.emit( ask );
+	hooks.overrideFilterToStringNumber.emit( ask );
+	const probability = ask.probability;
 
 	if ( BigNumber.isBigNumber( probability ) ) {
 		if ( probability.isGreaterThanOrEqualTo( 0 ) && probability.isLessThanOrEqualTo( 50 ) ) {
@@ -321,10 +321,9 @@ function probabilityToDice6( ask: IAsk ) {
 	if ( hProbability !== null ) {
 		return hProbability;
 	}
-	let probability = hooks.onProbabilityToString.emit( ask ) ?? ask.probability;
-	if ( typeof probability === 'number' ) {
-		probability = new BigNumber( probability );
-	}
+	hooks.onProbabilityToString.emit( ask );
+	hooks.overrideFilterToStringNumber.emit( ask );
+	const probability = ask.probability;
 
 	if ( BigNumber.isBigNumber( probability ) ) {
 		if ( probability.isGreaterThanOrEqualTo( 0 ) && probability.isLessThanOrEqualTo( 16.66 ) ) {
@@ -551,16 +550,15 @@ bot.on( 'inline_query', async function ( ctx ) {
 		} );
 	} catch ( ex ) {
 		if ( String( ex ).match( QUERY_RESPONSE_TIMEOUT ) ) {
-			winston.warn( util.format( 'response timeout expired, check your server config' ) );
+			winston.warn( 'response timeout expired, check your server config' );
 			return;
 		} else if ( String( ex ).match( CANNOT_PARSE_ENTITIES ) ) {
 			winston.warn( util.format( 'string "%s" can\'t parse as html.', result ) );
 		} else {
-			console.log( ex );
-			winston.error( ex );
+			winston.error( util.inspect( ex ) );
 		}
 
-		ctx.answerInlineQuery( [
+		return ctx.answerInlineQuery( [
 			{
 				type: 'article',
 				id: getRandomID(),
@@ -576,8 +574,8 @@ bot.on( 'inline_query', async function ( ctx ) {
 	}
 } );
 
-bot.catch( function ( err ) {
-	winston.error( 'TelegramBot error:', err );
+bot.catch( function ( error ) {
+	winston.error( 'TelegramBot error:', util.inspect( error ) );
 } );
 
 if ( config.reloadFile ) {
@@ -594,7 +592,7 @@ if ( config.launchType === 'webhook' && config.webhook?.url ) {
 	try {
 		config.webhook.url = new URL( config.webhook.url ).href;
 	} catch ( error ) {
-		winston.error( `Can't parse webhook url: ${ String( error ) }` );
+		winston.error( 'Can\'t parse webhook url:', util.inspect( error ) );
 		// eslint-disable-next-line no-process-exit
 		process.exit( 1 );
 	}
