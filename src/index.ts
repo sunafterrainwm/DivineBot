@@ -588,17 +588,17 @@ if ( config.reloadFile ) {
 	} );
 }
 
-if ( config.launchType === 'webhook' && config.webhook?.url ) {
-	try {
-		config.webhook.url = new URL( config.webhook.url ).href;
-	} catch ( error ) {
-		winston.error( 'Can\'t parse webhook url:', util.inspect( error ) );
-		// eslint-disable-next-line no-process-exit
-		process.exit( 1 );
-	}
-
+if ( config.launchType === 'webhook' && config.webhook?.port ) {
 	// 自动设置Webhook网址
 	if ( config.webhook.url ) {
+		try {
+			config.webhook.url = new URL( config.webhook.url ).href;
+		} catch ( error ) {
+			winston.error( 'Can\'t parse webhook url:', util.inspect( error ) );
+			// eslint-disable-next-line no-process-exit
+			process.exit( 1 );
+		}
+
 		if ( config.webhook.ssl?.certPath ) {
 			bot.telegram.setWebhook( config.webhook.url, {
 				certificate: {
