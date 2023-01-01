@@ -11,6 +11,7 @@ import cheerio = require( 'cheerio' );
 import { job as cronJob } from 'cron';
 import crypto = require( 'crypto' );
 import fs = require( 'fs' );
+import { cloneDeep } from 'lodash';
 import LRU = require( 'lru-cache' );
 import winston = require( 'winston' );
 import TelegramLogger = require( 'winston-telegram' );
@@ -21,7 +22,6 @@ import type * as TT from 'typegram';
 
 import * as hooks from 'src/hooks';
 import { config } from 'config/config';
-import { cloneDeep } from 'lodash';
 
 const QUERY_RESPONSE_TIMEOUT = 'query is too old and response timeout expired or query ID is invalid';
 const CANNOT_PARSE_ENTITIES = "Can't parse entities";
@@ -388,7 +388,12 @@ function getFormatProbability( ask: IAsk, type: ProbabilityTransform, ctx: Inlin
 	return output;
 }
 
-function buildInlineQuery( query: string, ctx: InlineContext ) {
+function buildInlineQuery( query: string, ctx: InlineContext ): {
+	result: TT.InlineQueryResult[];
+	probabilities: {
+		warning: string;
+	} | Probabilities;
+} {
 	const ask: IBaseAsk = {
 		userId: ctx.from.id,
 		rawQuery: query,
