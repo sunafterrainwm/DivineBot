@@ -14,7 +14,7 @@
 		"dev": "ts-node src/index.ts --preferTsExts",
 		"test": "pnpm run lint && pnpm run build",
 		"build": "tsc",
-		"lint": "eslint src/**/*.ts config/config.ts"
+		"lint": "eslint --ignore-path .gitignore src config --ext .ts"
 	},
 	"packageManager": "pnpm@7.21.0",
 	"dependencies": {
