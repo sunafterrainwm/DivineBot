@@ -1,0 +1,31 @@
+name: Build Test
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [master]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        submodules: true
+
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - uses: pnpm/action-setup@v2
+      with:
+        run_install: |
+          - args: [--frozen-lockfile]
+    - name: Lint
+      run: pnpm run lint
+
+    - name: Build
+      run: pnpm run build
