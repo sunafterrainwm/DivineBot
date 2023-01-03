@@ -24,11 +24,12 @@ jobs:
       with:
         run_install: |
           - args: [--frozen-lockfile]
-    - name: Lint
-      run: pnpm run lint
 
     - name: Create temp config
       run: cp config/config.example.ts config/config.ts
+
+    - name: Lint
+      run: pnpm run lint
 
     - name: Build
       run: pnpm run build
