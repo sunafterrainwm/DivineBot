@@ -23,6 +23,7 @@ import type * as TT from 'typegram';
 import * as hooks from 'src/hooks';
 import { config } from 'config/config';
 
+// eslint-disable-next-line es/no-global-this
 Object.defineProperty( globalThis, 'crypto', {
 	value: crypto
 } );
