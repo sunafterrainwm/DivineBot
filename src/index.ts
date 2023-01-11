@@ -23,6 +23,13 @@ import type * as TT from 'typegram';
 import * as hooks from 'src/hooks';
 import { config } from 'config/config';
 
+Object.defineProperty( globalThis, 'crypto', {
+	value: crypto
+} );
+BigNumber.set( {
+	CRYPTO: true
+} );
+
 const QUERY_RESPONSE_TIMEOUT = 'query is too old and response timeout expired or query ID is invalid';
 const CANNOT_PARSE_ENTITIES = "Can't parse entities";
 
