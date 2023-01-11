@@ -19,7 +19,8 @@
 			"config/*": [
 				"../config/*"
 			]
-		}
+		},
+		"skipLibCheck": true
 	},
 	"include": [
 		"src/*.ts",
