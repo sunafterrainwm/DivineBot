@@ -16,7 +16,7 @@
 		"build": "tsc",
 		"lint": "eslint --ignore-path .gitignore src config --ext .ts"
 	},
-	"packageManager": "pnpm@7.29.1",
+	"packageManager": "pnpm@7.30.5",
 	"dependencies": {
 		"bignumber.js": "^9.1.1",
 		"cheerio": "1.0.0-rc.12",
