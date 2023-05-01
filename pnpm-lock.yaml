@@ -17,7 +17,7 @@ specifiers:
   lodash: ^4.17.21
   lru-cache: ^7.14.1
   module-alias: ^2.2.2
-  telegraf: ~4.8.6
+  telegraf: ~4.12.0
   ts-node: ^10.9.1
   typegram: ^3.12.0
   typescript: ^4.9.4
@@ -32,7 +32,7 @@ dependencies:
   lodash: 4.17.21
   lru-cache: 7.18.3
   module-alias: 2.2.2
-  telegraf: 4.8.6
+  telegraf: 4.12.2
   typescript: 4.9.5
   winston: 3.8.2
   winston-telegram: 2.6.0_winston@3.8.2
@@ -2487,9 +2487,15 @@ packages:
 
   /minimist/1.2.8:
     resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
+    dev: true
 
   /module-alias/2.2.2:
     resolution: {integrity: sha512-A/78XjoX2EmNvppVWEhM2oGk3x4lLxnkEA4jTbaK97QKSDjkIoOsKQlfylt/d3kKKi596Qy3NP5XrXJ6fZIC9Q==}
+    dev: false
+
+  /mri/1.2.0:
+    resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
+    engines: {node: '>=4'}
     dev: false
 
   /ms/2.1.2:
@@ -3070,21 +3076,19 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /telegraf/4.8.6:
-    resolution: {integrity: sha512-FixxnJBrS8ECk/Wmo3VXzkTOlY2A1gsdIORJ//cdh3PcVqAL7wgcvLKjkEPI0IyxdFfRqTrWQEOn9h++revQaA==}
+  /telegraf/4.12.2:
+    resolution: {integrity: sha512-PgwqI4wD86cMqVfFtEM9JkGGnMHgvgLJbReZMmwW4z35QeOi4DvbdItONld4bPnYn3A1jcO0SRKs0BXmR+x+Ew==}
     engines: {node: ^12.20.0 || >=14.13.1}
-    deprecated: Switch to 4.9.0 or higher
     hasBin: true
     dependencies:
       abort-controller: 3.0.0
       debug: 4.3.4
-      minimist: 1.2.8
-      module-alias: 2.2.2
+      mri: 1.2.0
       node-fetch: 2.6.9
       p-timeout: 4.1.0
       safe-compare: 1.1.4
       sandwich-stream: 2.0.2
-      typegram: 3.12.0
+      typegram: 4.3.0
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -3214,6 +3218,11 @@ packages:
 
   /typegram/3.12.0:
     resolution: {integrity: sha512-/VrU0sJv8BdOsBIpYT4w35C7dPg5YyKP6fLiYN9qYXRZ86TVIiw0ZypkzElTAfDVsJtJSluGAufUrcX7VRSIYQ==}
+    dev: true
+
+  /typegram/4.3.0:
+    resolution: {integrity: sha512-pS4STyOZoJ++Mwa9GPMTNjOwEzMkxFfFt1By6IbMOJfheP0utMP/H1ga6J9R4DTjAYBr0UDn4eQg++LpWBvcAg==}
+    dev: false
 
   /typescript/4.9.5:
     resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==}
