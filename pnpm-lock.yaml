@@ -4,7 +4,7 @@ specifiers:
   '@types/cron': ^2.0.0
   '@types/lodash': ^4.14.191
   '@types/module-alias': ^2.0.1
-  '@types/node': ^17.0.45
+  '@types/node': ^18.0.0
   '@typescript-eslint/eslint-plugin': ~5.62.0
   '@typescript-eslint/parser': ~5.62.0
   bignumber.js: ^9.1.1
@@ -41,14 +41,14 @@ devDependencies:
   '@types/cron': 2.0.1
   '@types/lodash': 4.14.196
   '@types/module-alias': 2.0.1
-  '@types/node': 17.0.45
+  '@types/node': 18.17.1
   '@typescript-eslint/eslint-plugin': 5.62.0_h4bzsnnpkoy5vait27krl57wui
   '@typescript-eslint/parser': 5.62.0_qzrgnijdkb26bxvpro4ocvcfk4
   eslint: 8.46.0
   eslint-config-wikimedia: 0.21.0
   eslint-import-resolver-typescript: 3.5.5_kbpaydxv3pevc3xzyttedgrvdu
   eslint-plugin-import: 2.28.0_l4wv2ryudfgmv67zjhubgmsfdm
-  ts-node: 10.9.1_cin3sed6ohfsopbmt6orxeb4o4
+  ts-node: 10.9.1_2u7rfjqmbosdxhfnald2ndnaku
   typegram: 3.12.0
   winston-transport: 4.5.0
 
@@ -502,7 +502,7 @@ packages:
     resolution: {integrity: sha512-WHa/1rtNtD2Q/H0+YTTZoty+/5rcE66iAFX2IY+JuUoOACsevYyFkSYu/2vdw+G5LrmO7Lxowrqm0av4k3qWNQ==}
     dependencies:
       '@types/luxon': 3.3.1
-      '@types/node': 17.0.45
+      '@types/node': 18.17.1
     dev: true
 
   /@types/json-schema/7.0.12:
@@ -525,8 +525,8 @@ packages:
     resolution: {integrity: sha512-DN/CCT1HQG6HquBNJdLkvV+4v5l/oEuwOHUPLxI+Eub0NED+lk0YUfba04WGH90EINiUrNgClkNnwGmbICeWMQ==}
     dev: true
 
-  /@types/node/17.0.45:
-    resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
+  /@types/node/18.17.1:
+    resolution: {integrity: sha512-xlR1jahfizdplZYRU59JlUx9uzF1ARa8jbhM11ccpCJya8kvos5jwdm2ZAgxSCwOl0fq21svP18EVwPBXMQudw==}
     dev: true
 
   /@types/normalize-package-data/2.4.1:
@@ -3347,7 +3347,7 @@ packages:
     resolution: {integrity: sha512-aZbgViZrg1QNcG+LULa7nhZpJTZSLm/mXnHXnbAbjmN5aSa0y7V+wvv6+4WaBtpISJzThKy+PIPxc1Nq1EJ9mg==}
     engines: {node: '>= 14.0.0'}
 
-  /ts-node/10.9.1_cin3sed6ohfsopbmt6orxeb4o4:
+  /ts-node/10.9.1_2u7rfjqmbosdxhfnald2ndnaku:
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
     hasBin: true
     peerDependencies:
@@ -3366,7 +3366,7 @@ packages:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 17.0.45
+      '@types/node': 18.17.1
       acorn: 8.10.0
       acorn-walk: 8.2.0
       arg: 4.1.3
