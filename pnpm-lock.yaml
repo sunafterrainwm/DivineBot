@@ -34,8 +34,8 @@ dependencies:
   module-alias: 2.2.3
   telegraf: 4.8.6
   typescript: 4.9.5
-  winston: 3.11.0
-  winston-telegram: 2.7.0_winston@3.11.0
+  winston: 3.12.0
+  winston-telegram: 2.7.0_winston@3.12.0
 
 devDependencies:
   '@types/cron': 2.4.0
@@ -3450,13 +3450,13 @@ packages:
       isexe: 2.0.0
     dev: true
 
-  /winston-telegram/2.7.0_winston@3.11.0:
+  /winston-telegram/2.7.0_winston@3.12.0:
     resolution: {integrity: sha512-7boKnXP5Ma0GtsdxzCEqQdSt1RQfTASyL23Utc2zDc7JMPi1bl/xN8fLrRfSNPHDuepRrSMItmT928+t2ehc2A==}
     engines: {node: '>= 14.0.0'}
     peerDependencies:
       winston: ^3.0.0
     dependencies:
-      winston: 3.11.0
+      winston: 3.12.0
       winston-transport: 4.7.0
     dev: false
 
@@ -3468,8 +3468,8 @@ packages:
       readable-stream: 3.6.2
       triple-beam: 1.4.1
 
-  /winston/3.11.0:
-    resolution: {integrity: sha512-L3yR6/MzZAOl0DsysUXHVjOwv8mKZ71TrA/41EIduGpOOV5LQVodqN+QdQ6BS6PJ/RdIshZhq84P/fStEZkk7g==}
+  /winston/3.12.0:
+    resolution: {integrity: sha512-OwbxKaOlESDi01mC9rkM0dQqQt2I8DAUMRLZ/HpbwvDXm85IryEHgoogy5fziQy38PntgZsLlhAYHz//UPHZ5w==}
     engines: {node: '>= 12.0.0'}
     dependencies:
       '@colors/colors': 1.6.0
