@@ -4,7 +4,7 @@ specifiers:
   '@types/cron': ^2.0.0
   '@types/lodash': ^4.14.191
   '@types/module-alias': ^2.0.1
-  '@types/node': ^18.0.0
+  '@types/node': ^20.0.0
   '@typescript-eslint/eslint-plugin': ~5.62.0
   '@typescript-eslint/parser': ~5.62.0
   bignumber.js: ^9.1.1
@@ -41,14 +41,14 @@ devDependencies:
   '@types/cron': 2.4.0
   '@types/lodash': 4.17.5
   '@types/module-alias': 2.0.4
-  '@types/node': 18.19.38
+  '@types/node': 20.14.7
   '@typescript-eslint/eslint-plugin': 5.62.0_gceg25gd4xew4ky25uvc7u6nti
   '@typescript-eslint/parser': 5.62.0_4lxgoysztp3gakdxqfzw7vhg4u
   eslint: 8.57.0
   eslint-config-wikimedia: 0.21.0
   eslint-import-resolver-typescript: 3.6.1_s2vrfeon4wsunk6xt36rgubooe
   eslint-plugin-import: 2.29.1_r6f4jvbvppzp6yj4ns3svmasoy
-  ts-node: 10.9.2_3srvwwntwazyvz27p2obmnyt2e
+  ts-node: 10.9.2_6m5twgte6m5uy2mrfew2k7ssz4
   typegram: 3.12.0
   winston-transport: 4.7.0
 
@@ -512,8 +512,8 @@ packages:
     resolution: {integrity: sha512-5+G/QXO/DvHZw60FjvbDzO4JmlD/nG5m2/vVGt25VN1eeP3w2bCoks1Wa7VuptMPM1TxJdx6RjO70N9Fw0nZPA==}
     dev: true
 
-  /@types/node/18.19.38:
-    resolution: {integrity: sha512-SApYXUF7si4JJ+lO2o6X60OPOnA6wPpbiB09GMCkQ+JAwpa9hxUVG8p7GzA08TKQn5OhzK57rj1wFj+185YsGg==}
+  /@types/node/20.14.7:
+    resolution: {integrity: sha512-uTr2m2IbJJucF3KUxgnGOZvYbN0QgkGyWxG6973HCpMYFy2KfcgYuIwkJQMQkt1VbBMlvWRbpshFTLxnxCZjKQ==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -3239,7 +3239,7 @@ packages:
     resolution: {integrity: sha512-aZbgViZrg1QNcG+LULa7nhZpJTZSLm/mXnHXnbAbjmN5aSa0y7V+wvv6+4WaBtpISJzThKy+PIPxc1Nq1EJ9mg==}
     engines: {node: '>= 14.0.0'}
 
-  /ts-node/10.9.2_3srvwwntwazyvz27p2obmnyt2e:
+  /ts-node/10.9.2_6m5twgte6m5uy2mrfew2k7ssz4:
     resolution: {integrity: sha512-f0FFpIdcHgn8zcPSbf1dRevwt047YMnaiJM3u2w2RewrB+fob/zePZcrOyQoLMMO7aBIddLcQIEK5dYjkLnGrQ==}
     hasBin: true
     peerDependencies:
@@ -3258,7 +3258,7 @@ packages:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 18.19.38
+      '@types/node': 20.14.7
       acorn: 8.12.0
       acorn-walk: 8.3.3
       arg: 4.1.3
