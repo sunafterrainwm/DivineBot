@@ -34,21 +34,21 @@ dependencies:
   module-alias: 2.2.3
   telegraf: 4.8.6
   typescript: 4.9.5
-  winston: 3.13.1
-  winston-telegram: 2.7.0_winston@3.13.1
+  winston: 3.14.1
+  winston-telegram: 2.7.0_winston@3.14.1
 
 devDependencies:
   '@types/cron': 2.4.0
   '@types/lodash': 4.17.7
   '@types/module-alias': 2.0.4
-  '@types/node': 20.14.14
+  '@types/node': 20.14.15
   '@typescript-eslint/eslint-plugin': 5.62.0_gceg25gd4xew4ky25uvc7u6nti
   '@typescript-eslint/parser': 5.62.0_4lxgoysztp3gakdxqfzw7vhg4u
   eslint: 8.57.0
   eslint-config-wikimedia: 0.21.0
   eslint-import-resolver-typescript: 3.6.1_s2vrfeon4wsunk6xt36rgubooe
   eslint-plugin-import: 2.29.1_r6f4jvbvppzp6yj4ns3svmasoy
-  ts-node: 10.9.2_ldudfekbtnphw3ojanpi663o2e
+  ts-node: 10.9.2_bgrfmd6p2vwte6bxqwnqh34loe
   typegram: 3.12.0
   winston-transport: 4.7.1
 
@@ -479,8 +479,8 @@ packages:
     resolution: {integrity: sha512-5+G/QXO/DvHZw60FjvbDzO4JmlD/nG5m2/vVGt25VN1eeP3w2bCoks1Wa7VuptMPM1TxJdx6RjO70N9Fw0nZPA==}
     dev: true
 
-  /@types/node/20.14.14:
-    resolution: {integrity: sha512-d64f00982fS9YoOgJkAMolK7MN8Iq3TDdVjchbYHdEmjth/DHowx82GnoA+tVUAN+7vxfYUgAzi+JXbKNd2SDQ==}
+  /@types/node/20.14.15:
+    resolution: {integrity: sha512-Fz1xDMCF/B00/tYSVMlmK7hVeLh7jE5f3B7X1/hmV0MJBwE27KlS7EvD/Yp+z1lm8mVhwV5w+n8jOZG8AfTlKw==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -851,8 +851,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001647
-      electron-to-chromium: 1.5.4
+      caniuse-lite: 1.0.30001651
+      electron-to-chromium: 1.5.6
       node-releases: 2.0.18
       update-browserslist-db: 1.1.0_browserslist@4.23.3
     dev: true
@@ -893,8 +893,8 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /caniuse-lite/1.0.30001647:
-    resolution: {integrity: sha512-n83xdNiyeNcHpzWY+1aFbqCK7LuLfBricc4+alSQL2Xb6OR3XpnQAmlDG+pQcdTfiHRuLcQ96VOfrPSGiNJYSg==}
+  /caniuse-lite/1.0.30001651:
+    resolution: {integrity: sha512-9Cf+Xv1jJNe1xPZLGuUXLNkE1BoDkqRqYyFJ9TDYSqhduqA4hu4oR9HluGoWYQC/aj8WHjsGVV+bwkh0+tegRg==}
     dev: true
 
   /chalk/2.4.2:
@@ -1171,8 +1171,8 @@ packages:
       domhandler: 5.0.3
     dev: false
 
-  /electron-to-chromium/1.5.4:
-    resolution: {integrity: sha512-orzA81VqLyIGUEA77YkVA1D+N+nNfl2isJVjjmOyrlxuooZ19ynb+dOlaDTqd/idKRS9lDCSBmtzM+kyCsMnkA==}
+  /electron-to-chromium/1.5.6:
+    resolution: {integrity: sha512-jwXWsM5RPf6j9dPYzaorcBSUg6AiqocPEyMpkchkvntaH9HGfOOMZwxMJjDY/XEs3T5dM7uyH1VhRMkqUU9qVw==}
     dev: true
 
   /emoji-regex/8.0.0:
@@ -1441,7 +1441,7 @@ packages:
       '@mdn/browser-compat-data': 3.3.14
       ast-metadata-inferer: 0.7.0
       browserslist: 4.23.3
-      caniuse-lite: 1.0.30001647
+      caniuse-lite: 1.0.30001651
       core-js: 3.38.0
       eslint: 7.32.0
       find-up: 5.0.0
@@ -3212,7 +3212,7 @@ packages:
     resolution: {integrity: sha512-aZbgViZrg1QNcG+LULa7nhZpJTZSLm/mXnHXnbAbjmN5aSa0y7V+wvv6+4WaBtpISJzThKy+PIPxc1Nq1EJ9mg==}
     engines: {node: '>= 14.0.0'}
 
-  /ts-node/10.9.2_ldudfekbtnphw3ojanpi663o2e:
+  /ts-node/10.9.2_bgrfmd6p2vwte6bxqwnqh34loe:
     resolution: {integrity: sha512-f0FFpIdcHgn8zcPSbf1dRevwt047YMnaiJM3u2w2RewrB+fob/zePZcrOyQoLMMO7aBIddLcQIEK5dYjkLnGrQ==}
     hasBin: true
     peerDependencies:
@@ -3231,7 +3231,7 @@ packages:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 20.14.14
+      '@types/node': 20.14.15
       acorn: 8.12.1
       acorn-walk: 8.3.3
       arg: 4.1.3
@@ -3469,13 +3469,13 @@ packages:
       isexe: 2.0.0
     dev: true
 
-  /winston-telegram/2.7.0_winston@3.13.1:
+  /winston-telegram/2.7.0_winston@3.14.1:
     resolution: {integrity: sha512-7boKnXP5Ma0GtsdxzCEqQdSt1RQfTASyL23Utc2zDc7JMPi1bl/xN8fLrRfSNPHDuepRrSMItmT928+t2ehc2A==}
     engines: {node: '>= 14.0.0'}
     peerDependencies:
       winston: ^3.0.0
     dependencies:
-      winston: 3.13.1
+      winston: 3.14.1
       winston-transport: 4.7.1
     dev: false
 
@@ -3487,8 +3487,8 @@ packages:
       readable-stream: 3.6.2
       triple-beam: 1.4.1
 
-  /winston/3.13.1:
-    resolution: {integrity: sha512-SvZit7VFNvXRzbqGHsv5KSmgbEYR5EiQfDAL9gxYkRqa934Hnk++zze0wANKtMHcy/gI4W/3xmSDwlhf865WGw==}
+  /winston/3.14.1:
+    resolution: {integrity: sha512-CJi4Il/msz8HkdDfXOMu+r5Au/oyEjFiOZzbX2d23hRLY0narGjqfE5lFlrT5hfYJhPtM8b85/GNFsxIML/RVA==}
     engines: {node: '>= 12.0.0'}
     dependencies:
       '@colors/colors': 1.6.0
