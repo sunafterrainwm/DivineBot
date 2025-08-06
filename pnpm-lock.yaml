@@ -8,7 +8,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ~5.62.0
   '@typescript-eslint/parser': ~5.62.0
   bignumber.js: ^9.1.1
-  cheerio: 1.1.0
+  cheerio: 1.1.2
   cron: ^2.1.0
   eslint: ~8.57.0
   eslint-config-wikimedia: ~0.21.0
@@ -27,7 +27,7 @@ specifiers:
 
 dependencies:
   bignumber.js: 9.3.1
-  cheerio: 1.1.0
+  cheerio: 1.1.2
   cron: 2.4.4
   lodash: 4.17.21
   lru-cache: 7.18.3
@@ -1141,9 +1141,9 @@ packages:
       domutils: 3.2.2
     dev: false
 
-  /cheerio/1.1.0:
-    resolution: {integrity: sha512-+0hMx9eYhJvWbgpKV9hN7jg0JcwydpopZE4hgi+KvQtByZXPp04NiCWU0LzcAbP63abZckIHkTQaXVF52mX3xQ==}
-    engines: {node: '>=18.17'}
+  /cheerio/1.1.2:
+    resolution: {integrity: sha512-IkxPpb5rS/d1IiLbHMgfPuS0FgiWTtFIm/Nj+2woXDLTZ7fOT2eqzgYbdMlLweqlHbsZjxEChoVK+7iph7jyQg==}
+    engines: {node: '>=20.18.1'}
     dependencies:
       cheerio-select: 2.1.0
       dom-serializer: 2.0.0
