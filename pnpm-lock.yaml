@@ -41,14 +41,14 @@ devDependencies:
   '@types/cron': 2.4.3
   '@types/lodash': 4.17.20
   '@types/module-alias': 2.0.4
-  '@types/node': 22.18.10
+  '@types/node': 22.18.11
   '@typescript-eslint/eslint-plugin': 5.62.0_xjofbppfavgzddet3eqaopcxxe
   '@typescript-eslint/parser': 5.62.0_avq3eyf5kaj6ssrwo7fvkrwnji
   eslint: 8.57.1
   eslint-config-wikimedia: 0.21.0
   eslint-import-resolver-typescript: 3.10.1_2exwcduccderqiu2u7qw4rc7d4
   eslint-plugin-import: 2.32.0_ufypjdn53dyrqi4r3krytwmgdq
-  ts-node: 10.9.2_krszrhgnxwmfiu6ar3nmp6sj4m
+  ts-node: 10.9.2_l3g36jvmikq44j5ky7s7clyowu
   typegram: 3.12.0
   winston-transport: 4.9.0
 
@@ -525,8 +525,8 @@ packages:
     resolution: {integrity: sha512-5+G/QXO/DvHZw60FjvbDzO4JmlD/nG5m2/vVGt25VN1eeP3w2bCoks1Wa7VuptMPM1TxJdx6RjO70N9Fw0nZPA==}
     dev: true
 
-  /@types/node/22.18.10:
-    resolution: {integrity: sha512-anNG/V/Efn/YZY4pRzbACnKxNKoBng2VTFydVu8RRs5hQjikP8CQfaeAV59VFSCzKNp90mXiVXW2QzV56rwMrg==}
+  /@types/node/22.18.11:
+    resolution: {integrity: sha512-Gd33J2XIrXurb+eT2ktze3rJAfAp9ZNjlBdh4SVgyrKEOADwCbdUDaK7QgJno8Ue4kcajscsKqu6n8OBG3hhCQ==}
     dependencies:
       undici-types: 6.21.0
     dev: true
@@ -1032,8 +1032,8 @@ packages:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
     dev: true
 
-  /baseline-browser-mapping/2.8.16:
-    resolution: {integrity: sha512-OMu3BGQ4E7P1ErFsIPpbJh0qvDudM/UuJeHgkAvfWe+0HFJCXh+t/l8L6fVLR55RI/UbKrVLnAXZSVwd9ysWYw==}
+  /baseline-browser-mapping/2.8.18:
+    resolution: {integrity: sha512-UYmTpOBwgPScZpS4A+YbapwWuBwasxvO/2IOHArSsAhL/+ZdmATBXTex3t+l2hXwLVYK382ibr/nKoY9GKe86w==}
     hasBin: true
     dev: true
 
@@ -1063,10 +1063,10 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      baseline-browser-mapping: 2.8.16
-      caniuse-lite: 1.0.30001750
-      electron-to-chromium: 1.5.234
-      node-releases: 2.0.23
+      baseline-browser-mapping: 2.8.18
+      caniuse-lite: 1.0.30001751
+      electron-to-chromium: 1.5.237
+      node-releases: 2.0.25
       update-browserslist-db: 1.1.3_browserslist@4.26.3
     dev: true
 
@@ -1121,8 +1121,8 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /caniuse-lite/1.0.30001750:
-    resolution: {integrity: sha512-cuom0g5sdX6rw00qOoLNSFCJ9/mYIsuSOA+yzpDw8eopiFqcVwQvZHqov0vmEighRxX++cfC0Vg1G+1Iy/mSpQ==}
+  /caniuse-lite/1.0.30001751:
+    resolution: {integrity: sha512-A0QJhug0Ly64Ii3eIqHu5X51ebln3k4yTUkY1j8drqpWHVreg/VLijN48cZ1bYPiqOQuqpkIKnzr/Ul8V+p6Cw==}
     dev: true
 
   /chalk/2.4.2:
@@ -1421,8 +1421,8 @@ packages:
       gopd: 1.2.0
     dev: true
 
-  /electron-to-chromium/1.5.234:
-    resolution: {integrity: sha512-RXfEp2x+VRYn8jbKfQlRImzoJU01kyDvVPBmG39eU2iuRVhuS6vQNocB8J0/8GrIMLnPzgz4eW6WiRnJkTuNWg==}
+  /electron-to-chromium/1.5.237:
+    resolution: {integrity: sha512-icUt1NvfhGLar5lSWH3tHNzablaA5js3HVHacQimfP8ViEBOQv+L7DKEuHdbTZ0SKCO1ogTJTIL1Gwk9S6Qvcg==}
     dev: true
 
   /emoji-regex/8.0.0:
@@ -1677,7 +1677,7 @@ packages:
       '@mdn/browser-compat-data': 3.3.14
       ast-metadata-inferer: 0.7.0
       browserslist: 4.26.3
-      caniuse-lite: 1.0.30001750
+      caniuse-lite: 1.0.30001751
       core-js: 3.46.0
       eslint: 7.32.0
       find-up: 5.0.0
@@ -2919,8 +2919,8 @@ packages:
       whatwg-url: 5.0.0
     dev: false
 
-  /node-releases/2.0.23:
-    resolution: {integrity: sha512-cCmFDMSm26S6tQSDpBCg/NR8NENrVPhAJSf+XbxBG4rPFaaonlEoE9wHQmun+cls499TQGSb7ZyPBRlzgKfpeg==}
+  /node-releases/2.0.25:
+    resolution: {integrity: sha512-4auku8B/vw5psvTiiN9j1dAOsXvMoGqJuKJcR+dTdqiXEK20mMTk1UEo3HS16LeGQsVG6+qKTPM9u/qQ2LqATA==}
     dev: true
 
   /normalize-package-data/2.5.0:
@@ -3660,7 +3660,7 @@ packages:
     resolution: {integrity: sha512-aZbgViZrg1QNcG+LULa7nhZpJTZSLm/mXnHXnbAbjmN5aSa0y7V+wvv6+4WaBtpISJzThKy+PIPxc1Nq1EJ9mg==}
     engines: {node: '>= 14.0.0'}
 
-  /ts-node/10.9.2_krszrhgnxwmfiu6ar3nmp6sj4m:
+  /ts-node/10.9.2_l3g36jvmikq44j5ky7s7clyowu:
     resolution: {integrity: sha512-f0FFpIdcHgn8zcPSbf1dRevwt047YMnaiJM3u2w2RewrB+fob/zePZcrOyQoLMMO7aBIddLcQIEK5dYjkLnGrQ==}
     hasBin: true
     peerDependencies:
@@ -3679,7 +3679,7 @@ packages:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 22.18.10
+      '@types/node': 22.18.11
       acorn: 8.15.0
       acorn-walk: 8.3.4
       arg: 4.1.3
